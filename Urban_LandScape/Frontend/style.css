@@ -1,0 +1,44 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Transparent Green Header */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 128, 0, 0.7); /* Transparent Green */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Main Sections */
+main {
+    margin-top: 80px; /* Ensures sections don't get covered by fixed header */
+    padding: 20px;
+}
+
+section {
+    padding: 50px;
+    margin: 20px auto;
+    width: 80%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
