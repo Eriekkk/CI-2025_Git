@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Draft</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <!-- Left Section: Green Rounded Square with Logo -->
+        <div class="header-left">
+            <div class="icon-box">
+                <img src="placeholder.png" alt="Logo">
+            </div>
+        </div>
+
+        <!-- Middle Section: Shortcut Headers to Sections (Hidden in Mobile) -->
+        <nav class="header-middle">
+            <h3><a href="#section-a">Home</a></h3>
+            <h3><a href="#section-b">Services</a></h3>
+            <h3><a href="#section-c">Projects</a></h3>
+            <h3><a href="#section-d">About</a></h3>
+        </nav>
+
+        <!-- Right Section: "Contacts" Shortcut to Footer (Hidden in Mobile) -->
+        <div class="header-right">
+            <div class="info-box">
+                <h3><a href="#footer">Contacts</a></h3>
+            </div>
+        </div>
+
+        <!-- Mobile Settings Button (Only Visible on Phones) -->
+        <button class="menu-btn">
+            <img src="menu_icon-B.png" alt="Menu Icon">
+        </button>
+    </header>
+
+    <!-- Overlay Menu -->
+    <div class="overlay">
+        <div class="overlay-menu">
+            <a href="#section-a">Home</a>
+            <a href="#section-b">Services</a>
+            <a href="#section-c">Projects</a>
+            <a href="#section-d">About</a>
+            <a href="#footer">Contacts</a>
+        </div>
+    </div>
+
+    <!-- Placeholder Sections -->
+    <section id="section-a" class="content-section">Home</section>
+    <section id="section-b" class="content-section">Services</section>
+    <section id="section-c" class="content-section">Projects</section>
+    <section id="section-d" class="content-section">About</section>
+    <section id="#footer" class="content-section">Contacts</section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Legal Jargon here &copy; [Domain Years]</p>
+    </footer>
+
+</body>
+</html>
