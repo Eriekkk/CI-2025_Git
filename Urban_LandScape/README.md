@@ -1,15 +1,15 @@
 #Dev notes for edit:
 
 #Remaining Sections = 8
-##Header (WIP)
-Our Service
-Our Mission
-How we work
-About Us
-Our Project
-FAQ
-Footnote
-Footer
+#Header (WIP)
+-Our Service
+-Our Mission
+-How we work
+-About Us
+-Our Project
+-FAQ
+-Footnote
+-Footer
 
 #Header:
 -Placeholder and values for each section are added
