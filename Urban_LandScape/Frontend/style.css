@@ -1,226 +1,262 @@
-/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
 }
-
-/* Header Container */
-header {
+h1, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+/*navbar*/
+navbar{
     display: flex;
+    background-color: #959E4E;
     justify-content: space-between;
+    height: 4rem;
     align-items: center;
-    width: 100%;
-    background: #8ab265; /* Green background */
-    padding: 10px 20px;
-    box-shadow: 0px 4px 6px rgba(90, 90, 90, 0.1);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Hides Header on Inactivity */
-header.hidden {
-    transform: translateY(-100%); /* Moves the header out of view */
-    transition: transform 0.5s ease-in-out, opacity 0.3s; /* Smooth transition for hiding */
-    opacity: 0; /* Makes the header invisible */
-}
-
-/* Left & Right Sections: Overflowing Rounded Boxes */
-.header-left .icon-box,
-.header-right .info-box {
-    width: 220px;
-    height: 100px;
-    background-color: #6d9f51;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 30px 30px 0; /* Right side rounded (left box) */
-    margin-left: -40px; /* Overflow outside */
-    overflow: visible;
-}
-
-/* Reverse the radius + margin for the right side */
-.header-right .info-box {
-    display: flex; /* Ensures the content inside the box is flexibly aligned */
-    flex-direction: column; /* Aligns text vertically inside the box */
-    justify-content: center; /* Centers the content vertically */
-    align-items: center; /* Centers the content horizontally */
-    text-align: center; /* Aligns the text inside the box */
-    width: 220px; /* Keeps the width consistent */
-    height: 100px; /* Keeps the height consistent */
-    background-color: #6d9f51; /* Background color for the box */
-    border-radius: 30px 0 0 30px; /* Rounded corners for the right side */
-    margin-right: -40px; /* Adjusts the position to overflow slightly */
-    overflow: visible; /* Ensures the content is visible */
-}
-
-/* Image Inside Left Section */
-.header-left .icon-box img {
-    width: 120px; /* Adjust logo size */
-    height: auto;
-}
-
-/* Middle Section: Shortcut Headers */
-.header-middle {
-    display: flex;
-    gap: 30px;
-}
-
-.header-middle h3 a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.header-middle h3 a:hover {
-    color: lightgreen;
-}
-
-/* Right Section: Contacts Button */
-.header-right {
-    display: flex; /* Ensures the content inside is flexibly aligned */
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    text-align: center; /* Aligns the text inside the container */
-    height: 100%; /* Ensures it takes the full height of the header */
-}
-
-.header-right .info-box h3 {
-    margin: 0; /* Removes default margin */
-    font-size: 92%; /* Adjusts the font size */
-    color: white; /* Ensures the text color contrasts with the background */
-}
-
-.header-right .info-box h3 a {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Ensures the link color matches the text */
-}
-
-.header-right .info-box h3 a:hover {
-    color: lightgreen; /* Changes the color on hover for better visibility */
-}
-
-/* Mobile Button (Hidden on Desktop) */
-.menu-btn {
-    display: none; /* Only visible on mobile (controlled by media queries) */
-    position: fixed; /* Fixes the button to a specific position on the screen */
-    top: 20px; /* Distance from the top of the screen */
-    right: 20px; /* Distance from the right of the screen */
-    background: none; /* Removes background color */
-    border: none; /* Removes border */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    z-index: 1001; /* Ensures it appears above other elements */
-    padding: 0; /* Removes default padding */
-}
-
-.menu-btn img {
-    width: 30px; /* Adjust the size of the icon */
-    height: 30px; /* Adjust the size of the icon */
-    object-fit: contain; /* Ensures the image fits within the button */
-}
-
-/* Overlay Styling */
-.overlay {
-    display: none; /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 128, 0, 0.9); /* Green overlay */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
 }
 
-/* Overlay Menu */
-.overlay-menu {
+navbar ul{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    list-style: none;
+    padding: 0.5rem 1rem;
 }
-
-.overlay-menu a {
-    color: white;
+navbar li a{
+    margin: 0 2rem;
+}
+navbar a{
     text-decoration: none;
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-/* Customizable Overlay Text */
-.overlay-text {
     color: white;
-    font-weight: bold;
-    text-align: center;
-    font-size: clamp(18px, 4vw, 48px); /* Dynamically scales text */
-    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    position: relative;
+}
+ navbar ul a:hover{
+    border-bottom: 5px solid #E37090;
+ }
+
+navbar a.active{
+    border-bottom: 5px solid #E37090;
+    padding-top: 5px;
+}
+.logo{
+    padding: 0.2rem 2rem;
+}
+.logo img{
+    height: 4rem;
+}
+/*header*/
+.header_container{
+    margin-top: 4rem;
+    width: 100%;
+    height: 80vh;
+    background-image: url("Images/headerimg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+.header_logo{
+    height: 25rem;
+    margin-left: 2rem;
 }
 
-/* Sections Styling */
-.content-section {
-    height: 100vh;
+/* Our service section for container in home page*/
+.cards_container{
+    margin: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    background: #ddd;
-    margin-top: 100px;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-
-/* Section A */
-#section-a {
-    background: url('placeholderBG.png') no-repeat center center/cover; /* Puts it as a complete section background image */
-    height: 100vh;
+.card{
+    background-color:#D1BE8A;
+    width: 320px;
+    height: 320px;
+    padding: 1rem 1rem;
+    margin-bottom: 5rem;
+}
+.card_info{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.card_info i{
+    color: #FAF6E9;
+    padding-top: 4.5rem;
+    font-size: 3.5rem;
+}
+.card_info h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-top: 1.5rem;
+}
+.card_info span{
+    visibility: hidden;
+}
+.card:hover{
+    cursor: pointer;
+}
+.home_service_sec{
+    margin: 5rem 0  ;
+}
+.home_service_sec h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+}
+/* Our mission section*/
+.home_mission_sec{
+    height: 60vh;
+    background-image: url(Images/ourmissionimg.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.mission_container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-#section-a .section-a-content h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-#section-a .section-a-content p {
-    font-size: 24px;
-    margin: 10px 0 0;
-}
-
-/* Footer */
-footer {
-    background: black;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
     color: white;
     text-align: center;
-    padding: 20px;
+    margin: 0 3rem;
 }
-
-/* MEDIA QUERIES FOR MOBILE */
-@media (max-width: 768px) {
-    .header-middle, .header-right {
-        display: none; /* Hide Middle & Right Section */
-    }
-
-    .menu-btn {
-        display: block; /* Show Menu Button */
-    }
-
-    .header-left .icon-box {
-        width: 260px;
-        height: 80px; /* Adjust Overflow Size */
-    }
+/*how we work section*/
+.home_about_sec{
+    margin: 5rem 3rem;
+}
+.home_about_sec img{
+    height: 100px;;
+}
+.how_work_info_container{
+    background-color: #FAF6E9;
+}
+.how_work_info{
+    width: 30%;
+}
+.how_work_info h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.how_work_info p {
+    padding-bottom: 2rem;
+}
+.how_work_info a{
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: #959E4E;
+    padding: 0.6rem 3rem;
+}
+.how_work_info a:hover{
+    background-color: #E37090;
     
-    .header-left .icon-box img {
-        width: auto;
-        height: auto;
-    }
+}
 
-    .overlay {
-        display: flex; /* Enable Overlay for Mobile */
-    }
+/*Home about us section*/
+.home_aboutus{
+    margin: 5rem 0;
+
+}.home_aboutus_info_container{
+    background-color: #FAF6E9;
+}
+.home_aboutus_info{
+    width: 35%;
+}
+.home_aboutus_info a{
+     text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: #959E4E;
+    padding: 0.6rem 3rem;
+}
+
+
+/*Our sevice page*/
+.service_header_container{
+    height: 60vh;
+    background-image: url("Images/serviceheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4rem;
+}
+
+/* Our Project Page*/
+.project_header_container{
+    height: 60vh;
+    background-image: url("Images/projectheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4rem;
+}
+/* Our About Page*/
+.about_header_container{
+    height: 60vh;
+    background-image: url("Images/aboutheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4rem;
+}
+.project_sec{
+    margin: 3rem 0  ;
+}
+.project_container button{
+    border: none;
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    
+
+}
+.project_container button:hover{
+    cursor: pointer;
+    color: #E37090;
+}
+.filter_buttons{
+    gap: 3rem;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+
+.filter_buttons .active{
+    border-bottom: 5px solid #E37090;
+    padding-top: 5px;
+}
+
+.project_filterable_card{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 3rem 3rem;
+}
+.project_card img{
+    width: 455px;
+    height: 420px;
+    object-fit: cover;
+}
+.project_card.hide{
+    display: none;
 }
